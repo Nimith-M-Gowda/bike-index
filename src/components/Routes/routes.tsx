@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Layout from './Layout';
+import DashBoard from '../pages/dashBoard/dashBoard';
 
 function Router(): ReactElement {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}></Route>
+      <Route path="/" element={<DashBoard />}></Route>
     </Routes>
   );
 }

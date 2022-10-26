@@ -1,10 +1,8 @@
 import React, { ReactElement } from 'react';
-import Layout from './Layout';
 
 function App(): ReactElement {
   return (
     <div>
-      <Layout />
       <header className="App-header">
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
