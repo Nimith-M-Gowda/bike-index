@@ -7,7 +7,7 @@ function DashBoard(): ReactElement {
 
   const renderBikeList = (): ReactNode => {
     try {
-      BikeData.map((bike) => {
+      return BikeData.map((bike) => {
         const {
           id,
           title,

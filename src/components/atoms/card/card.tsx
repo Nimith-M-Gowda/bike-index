@@ -2,6 +2,7 @@ import React, { Fragment, ReactElement } from 'react';
 import {
   containerStyles,
   detailsContainer,
+  headerStyle,
   imageContainer,
   imageStyle
 } from '../../../styles/card.css';
@@ -26,12 +27,20 @@ function Card({
           <img className={imageStyle} src={thumb} alt="bike.jpg" />
         </div>
         <div className={detailsContainer}>
-          <li>Stolen-Date : {id}</li>
+          <li>ID : {id}</li>
           <h2 className="titleStyles">{title}</h2>
           <p className="descriptionStyles">{description ?? 'no description'}</p>
-          <> Stolen-Date : {year ?? 'N / A'}</>
-          <> Year-Recorded : {dateStolen ?? 'N / A'}</>
-          <> Location : {stolenLocation ?? 'N / A'}</>
+          <>
+            {' '}
+            <span className={headerStyle}>Recorded Added Year</span> : {year ?? 'N / A'}
+          </>
+          <>
+            {' '}
+            <span className={headerStyle}>Date Stolen</span> : {dateStolen ?? 'N / A'}
+          </>
+          <>
+            <span className={headerStyle}> Location</span> : {stolenLocation ?? 'N / A'}
+          </>
         </div>
       </div>
     </Fragment>
