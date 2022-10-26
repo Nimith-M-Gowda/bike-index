@@ -14,7 +14,7 @@ function useDashBoard(): { BikeData: BikeDataTypes[]; error: string } {
         ' https://bikeindex.org/api/v3/search?location=Sydney&stolenness=stolen'
       );
       const fetchResultsJSON = await fetchResults.json();
-      setBikeData(fetchResultsJSON);
+      setBikeData(fetchResultsJSON.bikes);
     } catch (e: any) {
       setError(e);
     }

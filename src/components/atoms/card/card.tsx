@@ -1,14 +1,12 @@
-import React, { ReactElement } from 'react';
+import React, { Fragment, ReactElement } from 'react';
+import {
+  containerStyles,
+  detailsContainer,
+  imageContainer,
+  imageStyle
+} from '../../../styles/card.css';
+import { CardProps } from './cardProps';
 
-interface CardProps {
-  id: string;
-  title: string;
-  description?: string;
-  dateStolen?: Number;
-  year?: Number;
-  stolenLocation?: string;
-  thumb?: string;
-}
 function Card({
   id,
   title,
@@ -16,9 +14,28 @@ function Card({
   dateStolen,
   year,
   stolenLocation,
-  thumb
+  thumb,
+  onClickCard
 }: CardProps): ReactElement {
-  return <div></div>;
+  return (
+    <Fragment>
+      <div
+        className={containerStyles}
+        onClick={() => (onClickCard != null ? onClickCard(id) : console.log(id))}>
+        <div className={imageContainer}>
+          <img className={imageStyle} src={thumb} alt="bike.jpg" />
+        </div>
+        <div className={detailsContainer}>
+          <li>Stolen-Date : {id}</li>
+          <h2 className="titleStyles">{title}</h2>
+          <p className="descriptionStyles">{description ?? 'no description'}</p>
+          <> Stolen-Date : {year ?? 'N / A'}</>
+          <> Year-Recorded : {dateStolen ?? 'N / A'}</>
+          <> Location : {stolenLocation ?? 'N / A'}</>
+        </div>
+      </div>
+    </Fragment>
+  );
 }
 
 export default Card;
