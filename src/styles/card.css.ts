@@ -4,7 +4,8 @@ export const containerStyles = style({
   width: '100%',
   height: '40vh',
   display: 'flex',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  border: '2px solid black'
 });
 
 export const imageContainer = style({
@@ -18,8 +19,9 @@ export const detailsContainer = style({
 });
 export const imageStyle = style({
   height: '70%',
-  width: '70%',
-  padding: '20px'
+  width: '40%',
+  padding: '20px',
+  paddingLeft: '50px'
 });
 export const headerStyle = style({
   fontWeight: 'bold'

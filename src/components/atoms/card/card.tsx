@@ -28,8 +28,8 @@ function Card({
         </div>
         <div className={detailsContainer}>
           <li>ID : {id}</li>
-          <h2 className="titleStyles">{title}</h2>
-          <p className="descriptionStyles">{description ?? 'no description'}</p>
+          <h2>{title}</h2>
+          <p>{description ?? 'no description'}</p>
           <>
             {' '}
             <span className={headerStyle}>Recorded Added Year</span> : {year ?? 'N / A'}

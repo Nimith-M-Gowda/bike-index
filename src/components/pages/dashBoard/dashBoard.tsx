@@ -6,38 +6,30 @@ function DashBoard(): ReactElement {
   const { BikeData, error } = useDashBoard();
 
   const renderBikeList = (): ReactNode => {
-    try {
-      return BikeData.map((bike) => {
-        const {
-          id,
-          title,
-          thumb,
-          description,
-          year,
-          date_stolen: StolenDate,
-          stolen_location: StolenLoc
-        } = bike;
-        return (
-          <div key={id}>
-            <Card
-              id={id}
-              title={title}
-              description={description}
-              dateStolen={StolenDate}
-              year={year}
-              stolenLocation={StolenLoc}
-              thumb={thumb}
-            />
-          </div>
-        );
-      });
-    } catch (e) {
+    return BikeData.map((bike) => {
+      const {
+        id,
+        title,
+        thumb,
+        description,
+        year,
+        date_stolen: StolenDate,
+        stolen_location: StolenLoc
+      } = bike;
       return (
-        <div>
-          <h2>{'SOMETHING WENT WRONG'}</h2>
+        <div key={id}>
+          <Card
+            id={id}
+            title={title}
+            description={description}
+            dateStolen={StolenDate}
+            year={year}
+            stolenLocation={StolenLoc}
+            thumb={thumb}
+          />
         </div>
       );
-    }
+    });
   };
 
   if (error.length !== 0) {
