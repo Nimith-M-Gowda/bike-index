@@ -18,6 +18,7 @@ function useDashBoard(): {
 
   const getBikeDetails = async (): Promise<any> => {
     try {
+      setIsLoading(true);
       const fetchResults = await fetch(
         ' https://bikeindex.org/api/v3/search?location=Sydney&stolenness=stolen'
       );

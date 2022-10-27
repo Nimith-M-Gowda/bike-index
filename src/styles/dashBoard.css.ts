@@ -8,8 +8,8 @@ export const formContainer = style({
 });
 
 export const submitButtonStyle = style({
-  width: '40px',
-  height: '20px',
-  background: 'green',
+  width: '80px',
+  height: '30px',
+  padding: '10px',
   cursor: 'pointer'
 });

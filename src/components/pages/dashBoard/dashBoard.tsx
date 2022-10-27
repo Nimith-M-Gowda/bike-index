@@ -8,7 +8,7 @@ import Pagination from '../../utils/Pagination/pagination';
 function DashBoard(): ReactElement {
   const { BikeData, error, isLoading, setSearch } = useDashBoard();
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [searchValue, setSearchValue] = useState<number>(0);
+  const [searchValue, setSearchValue] = useState<number>();
   const [perEachPage] = useState<number>(10);
 
   const lastIndex: number = currentPage * perEachPage;
@@ -17,7 +17,7 @@ function DashBoard(): ReactElement {
 
   const handleSubmit = (e: any): void => {
     e.preventDefault();
-    setSearch(searchValue);
+    setSearch(searchValue ?? 0);
     // BikeData.filter((e) => e.year === searchValue);
   };
 
@@ -64,7 +64,9 @@ function DashBoard(): ReactElement {
           Year:
           <input type="number" value={searchValue} onChange={(e) => handleChange(e)} />
         </label>
-        <button className={submitButtonStyle} type="submit" value="Submit" />
+        <button className={submitButtonStyle} type="submit" value="Submit">
+          Submit
+        </button>
       </form>
       {isLoading && <StaleComponent name={'loading'} />}
       {renderBikeList()}
