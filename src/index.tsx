@@ -4,11 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Router from './components/routes/routes';
 import { BrowserRouter } from 'react-router-dom';
+import Layout from './components/utils/Layout/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <BrowserRouter>
-    <Router />
+    <Layout>
+      <Router />
+    </Layout>
   </BrowserRouter>
 );
 

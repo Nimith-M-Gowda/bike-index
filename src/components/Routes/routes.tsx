@@ -7,20 +7,6 @@ function Router(): ReactElement {
   return (
     <Routes>
       <Route path="/" element={<DashBoard />}></Route>
-      {/* <Route
-        path="/"
-        element={
-          <Card
-            id={'1'}
-            title={'title'}
-            description={'description'}
-            dateStolen={67}
-            year={90}
-            stolenLocation={'StolenLoc'}
-            thumb={'thumb.jpg'}
-          /> */}
-      {/* }> */}
-      {/* </Route> */}
     </Routes>
   );
 }

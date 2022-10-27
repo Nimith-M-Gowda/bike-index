@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Button from '../../atoms/Button/button';
+import Button from '../../atoms/button/button';
 import { buttonPositionStyle } from './pagination.css';
 
 export interface PaginationProps {
