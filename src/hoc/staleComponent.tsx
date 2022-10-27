@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { loadingStyle } from './staleComponent.css';
+import { loadingStyle } from '../styles/staleComponent.css';
 
 export interface StaleComponentProp {
   name: string;

@@ -8,6 +8,11 @@ import {
 } from '../../../styles/card.css';
 import { CardProps } from './cardProps';
 
+/**
+ *
+ * @param param0 CardProps
+ * @returns Card component
+ */
 function Card({
   id,
   title,

@@ -36,7 +36,7 @@ function DashBoard(): ReactElement {
         stolen_location: StolenLoc
       } = bike;
       return (
-        <div key={id}>
+        <div key={id} data-testid="cardtest">
           <Card
             id={id}
             title={title}
@@ -57,18 +57,28 @@ function DashBoard(): ReactElement {
   return (
     <Fragment>
       <h1>
-        total number of bike theft cases :<span>{BikeData.length}</span>
+        total number of bike theft cases in Sydney :<span>{BikeData.length}</span>
       </h1>
       <form className={formContainer} onSubmit={handleSubmit}>
         <label>
           Year:
-          <input type="number" value={searchValue} onChange={(e) => handleChange(e)} />
+          <input
+            data-testid="inputButton"
+            type="number"
+            value={searchValue}
+            onChange={(e) => handleChange(e)}
+          />
         </label>
-        <button className={submitButtonStyle} type="submit" value="Submit">
+        <button
+          data-testid="submitButton"
+          className={submitButtonStyle}
+          type="submit"
+          value="Submit">
           Submit
         </button>
       </form>
       {isLoading && <StaleComponent name={'loading'} />}
+      {BikeData.length === 0 && <StaleComponent name={'No Results'} />}
       {renderBikeList()}
       <Pagination
         totalItems={BikeData.length}

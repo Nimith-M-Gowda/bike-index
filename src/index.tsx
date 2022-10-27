@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Router from './components/routes/routes';
+import Router from './components/routes/route';
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './components/utils/Layout/Layout';
 
