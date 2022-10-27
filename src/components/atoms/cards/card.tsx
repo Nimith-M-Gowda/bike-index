@@ -1,6 +1,7 @@
 import React, { Fragment, ReactElement } from 'react';
 import {
   containerStyles,
+  descStyle,
   detailsContainer,
   headerStyle,
   imageContainer,
@@ -34,7 +35,7 @@ function Card({
         <div className={detailsContainer}>
           <li>ID : {id}</li>
           <h2>{title}</h2>
-          <p>{description ?? 'no description'}</p>
+          <p className={descStyle}>{description ?? 'no description'}</p>
           <>
             {' '}
             <span className={headerStyle}>Recorded Added Year</span> : {year ?? 'N / A'}

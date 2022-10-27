@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import DashBoard from '../components/pages/dashBoard/dashBoard';
+import DashBoard from '../components/pages/dashBoards/dashBoard';
 
 test('renders total item in UI', async () => {
   render(<DashBoard />);

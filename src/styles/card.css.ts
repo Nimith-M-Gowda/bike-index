@@ -15,7 +15,8 @@ export const detailsContainer = style({
   padding: '20px',
   display: 'flex',
   flexDirection: 'column',
-  width: '50%'
+  width: '50%',
+  fontSize: '18px'
 });
 export const imageStyle = style({
   height: '70%',
@@ -25,4 +26,7 @@ export const imageStyle = style({
 });
 export const headerStyle = style({
   fontWeight: 'bold'
+});
+export const descStyle = style({
+  fontSize: '15px'
 });

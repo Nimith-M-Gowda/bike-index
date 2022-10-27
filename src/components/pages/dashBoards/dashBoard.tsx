@@ -2,7 +2,7 @@ import React, { Fragment, ReactElement, ReactNode, useState } from 'react';
 import StaleComponent from '../../../hoc/staleComponent';
 import useDashBoard from '../../../hooks/use-dashboard/useDashBoard';
 import { formContainer, submitButtonStyle } from '../../../styles/dashBoard.css';
-import Card from '../../atoms/card/card';
+import Card from '../../atoms/cards/card';
 import Pagination from '../../utils/Pagination/pagination';
 
 function DashBoard(): ReactElement {
