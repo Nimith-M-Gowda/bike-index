@@ -16,7 +16,7 @@ export const detailsContainer = style({
   display: 'flex',
   flexDirection: 'column',
   width: '50%',
-  fontSize: '18px'
+  fontSize: '13px'
 });
 export const imageStyle = style({
   height: '70%',
