@@ -11,7 +11,7 @@ test('renders total item in UI', async () => {
   const submitButton = screen.getByTestId('submitButton');
   userEvent.click(submitButton);
 
-  setTimeout(() => {}, 2000);
+  setTimeout(() => {}, 2022);
   const cardtest = screen.getAllByTestId('cardtest');
-  expect(cardtest.length).toEqual(1);
+  expect(cardtest.length).toEqual(6);
 });
